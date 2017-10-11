@@ -62,10 +62,14 @@ def remove_node(node):
     """
 
     # considerations: remove 1st item, remove mid item; never last item
-    # traverse nodes via .next and reassigning current
+    # peek next node via .next
     # if current.data matches node.data, reassign current.next to current.next.next
 
+    # plan: reassign current node's data and next (the only thing we have access to)
+    # to the next node
 
+    node.data = node.next.data
+    node.next = node.next.next
 
 
 if __name__ == '__main__':
