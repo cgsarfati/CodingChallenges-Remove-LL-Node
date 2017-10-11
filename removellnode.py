@@ -61,6 +61,12 @@ def remove_node(node):
     Does not return anything; changes list in place.
     """
 
+    # considerations: remove 1st item, remove mid item; never last item
+    # traverse nodes via .next and reassigning current
+    # if current.data matches node.data, reassign current.next to current.next.next
+
+
+
 
 if __name__ == '__main__':
     import doctest
